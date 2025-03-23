@@ -10,6 +10,7 @@ function Oferta() {
   useEffect(() => {
     async function fetchOferta() {
       try {
+        // Ndrysho këtë URL me URL-në e backend-it të deploy-uar në Render ose platformën tjetër
         const response = await fetch("https://backend123-zs0m.onrender.com/api/ofertas?populate=Foto");
 
         if (!response.ok) {
