@@ -41,8 +41,8 @@ function Oferta() {
         {ofertat.map((oferta) => {
           const pershkrimi = oferta.Pershkrimi || "Përshkrimi mungon";
           
-          // Përdorim formatin 'large' për foton
-          const fotoUrl = oferta.Foto?.formats?.large?.url; // Fotot janë të marra nga Cloudinary në këtë URL
+          // Përdorim fotoUrl nga `Foto.url`
+          const fotoUrl = oferta.Foto?.url;
 
           return (
             <div 

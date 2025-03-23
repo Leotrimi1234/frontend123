@@ -41,8 +41,8 @@ function Lajmet() {
         {lajmet.map((lajmi) => {
           const pershkrimi = lajmi.Pershkrimi || "Përshkrimi mungon";
           
-          // Përdorim formatin 'large' për foton
-          const fotoUrl = lajmi.Foto?.formats?.large?.url; // Fotot janë të marra nga Cloudinary në këtë URL
+          // Përdorim fotoUrl nga `Foto.url`
+          const fotoUrl = lajmi.Foto?.url;
 
           return (
             <div 
