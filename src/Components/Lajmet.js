@@ -40,9 +40,9 @@ function Lajmet() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
         {lajmet.map((lajmi) => {
           const pershkrimi = lajmi.Pershkrimi || "Përshkrimi mungon";
-          // Përdor URL-në e Cloudinary
-          const fotoData = lajmi.Foto?.[0]?.url; // Fotot duhet të jenë të marra nga Cloudinary
-          const fotoUrl = fotoData ? fotoData : null;
+          
+          // Përdorim formatin 'large' për foton
+          const fotoUrl = lajmi.Foto?.formats?.large?.url; // Fotot janë të marra nga Cloudinary në këtë URL
 
           return (
             <div 
